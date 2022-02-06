@@ -12,8 +12,6 @@
 
 Timer 0 on the ATtiny85 is used, as it allows for Phase Correct PWM mode which is important to use for motor control (according to the internet).
 
-Want: Phase correct PWM, to use OCR0A to control frequency, OCB to control duty cycle.
-
 We need to select the PWM frequency (25KHz for the fan), and be able to set the duty cycle based on a potentiometer reading. OutputCompare A (OCA) is used to set the frequency, OutputCompare B (OCB) to control the duty cycle. The PWM frequncy is given by the below equation:
 
 Frequency = CPU frequency / prescaler / (OCR0A + 1) / 2
@@ -28,18 +26,14 @@ The values of the TCCR0 configuration registers uses are below. See the document
 
 TCCR0A:
 
-------------------------------------------------------------------------
 | COM0A1 | COM0A0 | COM0B1 | COM0B0 | ------ | ------ | WGM01  | WGM00 |
 ------------------------------------------------------------------------
 | 0      | 0      | 1      | 0      | 0      | 0      | 0      | 1     |
-------------------------------------------------------------------------
 
 TCCR0B:
 
-------------------------------------------------------------------------
 | FOC0A  | FOC0B  | ------ | ------ | WGM02  | CS02   | CS01   | CS00  |
 ------------------------------------------------------------------------
 | 0      | 0      | 0      | 0      | 1      | 0      | 0      | 1     |
-------------------------------------------------------------------------
 
 # Hardware
