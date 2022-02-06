@@ -26,13 +26,13 @@ The values of the TCCR0 configuration registers uses are below. See the document
 
 TCCR0A:
 
-| COM0A1 | COM0A0 | COM0B1 | COM0B0 | ------ | ------ | WGM01  | WGM00 |
+| COM0A1 | COM0A0 | COM0B1 | COM0B0 | xxxxxx | xxxxxx | WGM01  | WGM00 |
 ------------------------------------------------------------------------
 | 0      | 0      | 1      | 0      | 0      | 0      | 0      | 1     |
 
 TCCR0B:
 
-| FOC0A  | FOC0B  | ------ | ------ | WGM02  | CS02   | CS01   | CS00  |
+| FOC0A  | FOC0B  | xxxxxx | xxxxxx | WGM02  | CS02   | CS01   | CS00  |
 ------------------------------------------------------------------------
 | 0      | 0      | 0      | 0      | 1      | 0      | 0      | 1     |
 
